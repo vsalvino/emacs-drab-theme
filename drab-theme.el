@@ -1,20 +1,19 @@
 (deftheme drab "Ugly drab theme with subdued colors; easy on the eyes.")
 
 (let (
-      (bg         "#dad5d0")
-      (fg         "#000000")
-      (mark       "LightGoldenrod2")
+      (bg         "Seashell3")
+      (fg         "Black")
+      (mark       "#e7dfd9")
       (blue       "DodgerBlue4")
       (blue-light "SkyBlue4")
-      (cyan       "DarkTurquoise")
-      (gray-dark  "#4a4540")
-      (gray-light "#aaa5a0")
-      (gray-med   "#7a7570")
-      (green      "DarkOliveGreen")
+      (cyan       "CadetBlue4")
+      (gray-dark  "#4e4640")
+      (gray-light "#a79f99")
+      (gray-med   "#675f59")
+      (green      "DarkGreen")
       (orange     "Orange4")
       (purple     "Orchid4")
       (red        "IndianRed4")
-      (yellow     "DarkGoldenrod")
       )
 
   (custom-theme-set-faces
@@ -31,7 +30,7 @@
    `(shadow ((t (:foreground ,gray-med))))
    `(show-paren-match ((t (:inherit lazy-highlight))))
    `(success ((t (:foreground ,green))))
-   `(warning ((t (:foreground ,yellow))))
+   `(warning ((t (:foreground ,orange))))
 
    ;; UI chrome
    `(fringe ((t (:foreground ,gray-med :background nil))))
@@ -56,7 +55,7 @@
    `(font-lock-constant-face ((t (:foreground ,green))))
    `(font-lock-doc-delimiter-face ((t (:foreground ,gray-dark :slant normal))))
    `(font-lock-doc-face ((t (:foreground ,gray-dark :slant italic))))
-   `(font-lock-function-name-face ((t (:foreground ,yellow))))
+   `(font-lock-function-name-face ((t (:foreground ,cyan))))
    `(font-lock-keyword-face ((t (:foreground ,red))))
    `(font-lock-negation-char-face ((t (:foreground ,blue))))
    `(font-lock-preprocessor-face ((t (:foreground ,green))))
@@ -73,7 +72,7 @@
    ;; Searching
    `(isearch ((t (:background "LightGoldenrod1" :foreground "DarkOrange4"))))
    `(isearch-fail ((t (:background ,red :foreground,bg))))
-   `(lazy-highlight ((t (:background ,gray-light :foreground ,fg))))
+   `(lazy-highlight ((t (:background ,mark :foreground ,fg))))
    `(match ((t (:inherit lazy-highlight))))
    `(query-replace ((t (:inherit isearch))))
    `(secondary-selection ((t (:inherit lazy-highlight))))
@@ -86,6 +85,10 @@
    ;; IDO
    `(ido-only-match ((t (:inherit ido-match))))
    `(ido-subdir ((t (:inherit font-lock-comment-face))))
+
+   ;; Magit
+   `(magit-diff-context-highlight ((t (:foreground ,gray-med :background ,mark))))
+   `(magit-section-highlight ((t (:background ,mark))))
 
    ;; Markdown
    `(markdown-header-face ((t (:foreground ,blue :weight bold :background nil))))

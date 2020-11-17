@@ -7,6 +7,7 @@ Includes highlighting for:
 * Programming languages (font-lock)
 * Dired
 * IDO
+* Magit
 * Markdown
 * Org mode
 * reStructuredText
